@@ -1,0 +1,27 @@
+{
+  "name": "jquery-bindings",
+  "version": "1.0.0",
+  "description": "Simple two-way data binding using proxies and requestIdleCallback",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/tiaanduplessis/jquery-bindings",
+    "type": "git"
+  },
+  "homepage": "https://github.com/tiaanduplessis/jquery-bindings",
+  "bugs": "https://github.com/tiaanduplessis/jquery-bindings",
+  "main": "jquery-bindings.js",
+  "files": [
+    "jquery-bindings.js",
+    "jquery-bindings.min.js"
+  ],
+  "scripts": {
+    "format": "prettier-standard jquery-bindings.js",
+    "build": "uglifyjs jquery-bindings.js -o jquery-bindings.min.js",
+    "test": "npm run format"
+  },
+  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "devDependencies": {
+    "prettier-standard": "^7.0.3",
+    "uglify-js": "^3.1.9"
+  }
+}
