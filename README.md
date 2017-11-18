@@ -59,6 +59,8 @@
 
 ## About
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/jquery-bindings.svg)](https://greenkeeper.io/)
+
 Inspired by [a pen](https://codepen.io/Garrett-/pen/pfEHF), simple data bindings that rely on [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) (ensure this is [polyfilled](https://github.com/GoogleChrome/proxy-polyfill) for older browsers) and [requestIdleCallback](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) (Shimmed if not available).
 
 ## Install
