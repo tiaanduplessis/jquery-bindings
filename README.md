@@ -1,4 +1,6 @@
-
+<div align="center">
+    <img width="60%" src="example.gif" alt="example">
+</div>
 <h1 align="center">jquery-bindings</h1>
 <div align="center">
   <strong>Simple two-way data binding using proxies and requestIdleCallback (661 Bytes gzipped)</strong>
@@ -115,6 +117,8 @@ bindings.firstName = 'Dupie'
 bindings.age = 24
 
 ```
+
+See the [example](https://codepen.io/tiaan/pen/XzVjbG) for more information.
 
 ## API
 
