@@ -21,7 +21,7 @@
   },
   "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
   "devDependencies": {
-    "prettier-standard": "^7.0.3",
+    "prettier-standard": "^8.0.0",
     "uglify-js": "^3.1.9"
   }
 }
