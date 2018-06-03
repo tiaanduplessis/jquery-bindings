@@ -1,6 +1,6 @@
 {
   "name": "jquery-bindings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple two-way data binding using proxies and requestIdleCallback",
   "license": "MIT",
   "repository": {
