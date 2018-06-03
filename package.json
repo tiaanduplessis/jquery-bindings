@@ -15,13 +15,19 @@
     "jquery-bindings.min.js"
   ],
   "scripts": {
-    "format": "prettier-standard jquery-bindings.js",
+    "lint": "standard --fix jquery-bindings.js",
     "build": "uglifyjs jquery-bindings.js -o jquery-bindings.min.js",
-    "test": "npm run format"
+    "test": "npm run lint"
   },
-  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "author": "Tiaan du Plessis",
   "devDependencies": {
-    "prettier-standard": "^8.0.0",
-    "uglify-js": "^3.1.9"
+    "standard": "^11.0.1",
+    "uglify-js": "^3.4.0"
+  },
+  "standard": {
+    "env": {
+      "browser": true,
+      "jquery": true
+    }
   }
 }

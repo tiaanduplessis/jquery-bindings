@@ -16,9 +16,6 @@
   <a href="https://github.com/feross/standard">
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square" alt="standard JS linter" />
   </a>
-  <a href="https://github.com/prettier/prettier">
-    <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square" alt="prettier code formatting" />
-  </a>
   <a href="https://travis-ci.org/tiaanduplessis/jquery-bindings">
     <img src="https://img.shields.io/travis/tiaanduplessis/jquery-bindings.svg?style=flat-square" alt="travis ci build status" />
   </a>
@@ -28,22 +25,9 @@
   <a href="http://makeapullrequest.com">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="make a pull request" />
   </a>
-</div>
-<br>
-<div align="center">
-  <a href="https://github.com/tiaanduplessis/jquery-bindings/watchers">
-    <img src="https://img.shields.io/github/watchers/tiaanduplessis/jquery-bindings.svg?style=social" alt="Github Watch Badge" />
+  <a href="https://greenkeeper.io">
+    <img src="https://badges.greenkeeper.io/tiaanduplessis/jquery-bindings.svg" alt="Greenkeeper badge" />
   </a>
-  <a href="https://github.com/tiaanduplessis/jquery-bindings/stargazers">
-    <img src="https://img.shields.io/github/stars/tiaanduplessis/jquery-bindings.svg?style=social" alt="Github Star Badge" />
-  </a>
-  <a href="https://twitter.com/intent/tweet?text=Check%20out%20jquery-bindings!%20https://github.com/tiaanduplessis/jquery-bindings%20%F0%9F%91%8D">
-    <img src="https://img.shields.io/twitter/url/https/github.com/tiaanduplessis/jquery-bindings.svg?style=social" alt="Tweet" />
-  </a>
-</div>
-<br>
-<div align="center">
-  Built with ❤︎ by <a href="https://github.com/tiaanduplessis">tiaanduplessis</a> and <a href="https://github.com/tiaanduplessis/jquery-bindings/contributors">contributors</a>
 </div>
 
 <h2>Table of Contents</h2>
@@ -58,8 +42,6 @@
 </details>
 
 ## About
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/jquery-bindings.svg)](https://greenkeeper.io/)
 
 Inspired by [a pen](https://codepen.io/Garrett-/pen/pfEHF), simple data bindings that rely on [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) (ensure this is [polyfilled](https://github.com/GoogleChrome/proxy-polyfill) for older browsers) and [requestIdleCallback](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) (Shimmed if not available).
 

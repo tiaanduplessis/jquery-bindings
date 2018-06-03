@@ -1,4 +1,8 @@
+
+/* eslint no-shadow-restricted-names: "off" */
+
 ;(function ($, window, undefined) {
+  'use strict'
   var pluginName = 'bindings'
 
   // requestIdleCallback shim
@@ -8,7 +12,7 @@
     function (cb) {
       var start = Date.now()
       return setTimeout(function () {
-        cb({
+        cb({ // eslint-disable-line standard/no-callback-literal
           didTimeout: false,
           timeRemaining: function () {
             return Math.max(0, 50 - (Date.now() - start))
