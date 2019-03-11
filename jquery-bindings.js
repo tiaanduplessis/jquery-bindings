@@ -1,7 +1,6 @@
-
 /* eslint no-shadow-restricted-names: "off" */
 
-;(function ($, window, undefined) {
+(function ($, window, undefined) {
   'use strict'
   var pluginName = 'bindings'
 
@@ -27,10 +26,16 @@
       clearTimeout(id)
     }
 
-  function performIdleCallback (cb) {
-    return function () {
-      window.requestIdleCallback(cb)
+  function getMethod (hasVal, type) {
+    if (type === 'checkbox') {
+      return 'checked'
     }
+
+    if (hasVal) {
+      return 'val'
+    }
+
+    return 'html'
   }
 
   function Plugin (bindings, opts) {
@@ -48,20 +53,23 @@
         $elements.each(function () {
           var $this = $(this)
           var hasVal = $this.is('select, options, input, textarea')
-          var method = hasVal ? 'val' : 'html'
+          var method = getMethod(hasVal, $this.attr('type'))
 
           window.requestIdleCallback(function () {
-            $this[method](newval)
+            if (method === 'checked') {
+              $this.attr(method, newval)
+            } else {
+              $this[method](newval)
+            }
           })
 
           if (shouldListen) {
             var key = $this.attr('data-bind')
-            $this.on(
-              'keyup change',
-              performIdleCallback(function () {
-                self.bindings[key] = hasVal ? $this.val() : $this.html()
-              })
-            )
+
+            $this.on('keyup change', function () {
+              self.bindings[key] =
+                method === 'checked' ? $this.is(':checked') : $this[method]()
+            })
           }
         })
 
@@ -83,21 +91,23 @@
 
     $elements.each(function () {
       var $this = $(this)
-      var key = $this.attr('data-bind')
+      var key = $this.attr(attribute)
 
       var hasVal = $this.is('select, options, input, textarea')
-      var method = hasVal ? 'val' : 'html'
+      var method = getMethod(hasVal, $this.attr('type'))
 
       window.requestIdleCallback(function () {
-        $this[method](self.bindings[key])
+        if (method === 'checked') {
+          $this.attr(method, self.bindings[key])
+        } else {
+          $this[method](self.bindings[key])
+        }
       })
 
-      $this.on(
-        'keyup change',
-        performIdleCallback(function () {
-          self.bindings[key] = hasVal ? $this.val() : $this.html()
-        })
-      )
+      $this.on('keyup change', function () {
+        self.bindings[key] =
+          method === 'checked' ? $this.is(':checked') : $this[method]()
+      })
     })
   }
 
