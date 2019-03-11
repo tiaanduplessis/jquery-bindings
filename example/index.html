@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQUERY BINDINGS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="data">
+    <label for="firstName">First Name</label>
+    <input name=type="text" data-bind="firstName" />
+    <label for="lastName">Last Name:</label>
+    <input type="text" data-bind="lastName" />
+    <label for="age">Age:</label>
+    <input type="number" data-bind="age">
+    <label for="color">Color:</label>
+    <select data-bind="color" name="color">
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Blue">Blue</option>
+      <option value="Yellow">Yellow</option>
+    </select>
+  </section>
+  <section class="data">
+    <label for="firstName">First Name</label>
+    <input name=type="text" data-bind="firstName" />
+    <label for="lastName">Last Name:</label>
+    <input type="text" data-bind="lastName" />
+    <label for="age">Age:</label>
+    <input type="number" data-bind="age">
+    <label for="color">Color:</label>
+    <select data-bind="color" name="color">
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Blue">Blue</option>
+      <option value="Yellow">Yellow</option>
+    </select>
+  </section>
+  <section class="result">
+    <span data-bind="firstName"></span>
+    <br>
+    <span data-bind="lastName"></span>
+    <br>
+    <span data-bind="age"></span>
+    <br>
+    <span data-bind="color"></span>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="../jquery-bindings.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

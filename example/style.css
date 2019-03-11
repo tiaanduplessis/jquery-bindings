@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: monospace;
+  background-color: #222;
+  color: #fff;
+}
+
+input,
+select {
+  font-family: monospace;
+}
+
+.data {
+  display: flex;
+  margin: 1em;
+  flex-direction: column;
+}
+
+label {
+  margin: 1em 0;
+}
+
+.result {
+  font-size: 2em;
+}
