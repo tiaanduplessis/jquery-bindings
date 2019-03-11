@@ -3,7 +3,6 @@
 (function ($, window, undefined) {
   'use strict'
   var pluginName = 'bindings'
-
   // requestIdleCallback shim
   // https://developers.google.com/web/updates/2015/08/using-requestidlecallback
   window.requestIdleCallback =
@@ -26,7 +25,7 @@
       clearTimeout(id)
     }
 
-  function getMethod (hasVal, type) {
+  function getMethod(hasVal, type) {
     if (type === 'checkbox') {
       return 'checked'
     }
@@ -38,7 +37,7 @@
     return 'html'
   }
 
-  function Plugin (bindings, opts) {
+  function Plugin(bindings, opts) {
     var attribute = opts && opts.attribute ? opts.attribute : 'data-bind'
     var self = this
 
@@ -66,7 +65,7 @@
           if (shouldListen) {
             var key = $this.attr('data-bind')
 
-            $this.on('keyup change', function () {
+            $this.on('keyup change input', function () {
               self.bindings[key] =
                 method === 'checked' ? $this.is(':checked') : $this[method]()
             })
@@ -104,7 +103,7 @@
         }
       })
 
-      $this.on('keyup change', function () {
+      $this.on('keyup change input', function () {
         self.bindings[key] =
           method === 'checked' ? $this.is(':checked') : $this[method]()
       })
