@@ -22,7 +22,7 @@
   "author": "Tiaan du Plessis",
   "devDependencies": {
     "standard": "^12.0.0",
-    "uglify-js": "^3.4.0"
+    "uglify-js": "^3.5.8"
   },
   "standard": {
     "env": {
